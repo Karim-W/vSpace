@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     protected LocationManager locationManager;
     protected LocationListener locationListener;
-    private double Lng = 0;
-    private double Lat = 0;
+    private double Lng = 55.334;
+    private double Lat = 25.332;
     private GoogleMap myMap;
     private RequestQueue mQueue;
     private FusedLocationProviderClient fusedLocationClient;
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     // A default location (Sydney, Australia) and default zoom to use when location permission is
     // not granted.
-    private final LatLng defaultLocation = new LatLng(-33.8523341, 151.2106085);
+    private final LatLng defaultLocation = new LatLng(Lat, Lng);
     private static final int DEFAULT_ZOOM = 15;
     private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private boolean locationPermissionGranted;
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        myLoc = myLocManger.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 //        Lng =  myLoc.getLongitude();
 //        Lat = myLoc.getLatitude();
-        LatLng sydney = new LatLng(-33.87, 151.20);
+        LatLng sydney = new LatLng(Lat, Lng);
         googleMap.addMarker(new MarkerOptions()
                 .position(sydney)
                 .title("Marker in Sydney"));
